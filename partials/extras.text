@@ -1,0 +1,32 @@
+create database-> idiscuss
+
+
+
+//create table
+CREATE TABLE `categories` ( `categories_id` INT(8) NOT NULL AUTO_INCREMENT , `categories_name` VARCHAR(251) NOT NULL , `categories_description` text NOT NULL , `tstamp` DATETIME NOT NULL , PRIMARY KEY (`categories_id`)) ENGINE = InnoDB;
+//alter
+ALTER TABLE `categories` CHANGE `tstamp` `tstamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP;
+---------------------
+
+------------------------------------
+SELECT * FROM categories;
+show tables;
+select * from categories;
+-----------------------------------
+
+-----------------------------------------
+INSERT INTO `categories` (`categories_id`, `categories_name`, `categories_description`) VALUES (NULL, 'javascript', 'JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.');
+
+----------------------------------------------------------------------------------
+
+creating threds TABLE
+--------------------------
+CREATE TABLE `threads` ( `thread_id` INT(7) NOT NULL AUTO_INCREMENT , `thread_title` VARCHAR(251) NOT NULL , `thread_description` text NOT NULL , `thread_cat_id` INT(7)
+, `thread_user_id` INT(7),
+`timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`thread_id`)) ENGINE = InnoDB;
+
+-------------------------------------------------------------------------
+----------------------------------------
+
+//alter
+ALTER TABLE `categories` CHANGE `tstamp` `tstamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP;

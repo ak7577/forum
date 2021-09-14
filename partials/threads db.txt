@@ -1,0 +1,24 @@
+
+db queries for threads 
+------------------------
+creating threds TABLE
+---------------------------------------------
+
+CREATE TABLE `threads` ( `thread_id` INT(7) NOT NULL AUTO_INCREMENT , `thread_title` VARCHAR(251) NOT NULL , `thread_description` text NOT NULL , `thread_cat_id` INT(7)
+, `thread_user_id` INT(7),
+`timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`thread_id`)) ENGINE = InnoDB;
+
+
+--------------------------------------------------
+insert threads TABLE
+---------------------------------------------------
+INSERT INTO `threads` (`thread_id`, `thread_title`, `thread_description`, `thread_cat_id`, `thread_user_id`, `timestamp`) VALUES ('1', 'unable to install php', 'unable to install php in windows 10', '3', '0', current_timestamp())
+
+--------------------------
+//where cat_id is categories id 
+//user_id is users id   
+
+---------------------------------------------------
+selcting 
+---------------------------------------------------
+SELECT * FROM `threads` WHERE thread_cat_id=3
